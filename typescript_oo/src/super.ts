@@ -27,6 +27,11 @@ export class User {
 }
 
 class Manager extends User {
+  constructor(name: string, email: string, active: boolean, code: string){
+  console.log(code)
+  super(name, email, active)
+  }
+
   public getName(): string {
     return `Manager: ${this.name}`
   }
@@ -34,8 +39,8 @@ class Manager extends User {
   public getNumber(): number {
     return super.getNumber() + 10
   }
-
 }
+
 class Admin extends User {
   public getEmail(): string {
     return `Adm: ${this.email}`
@@ -46,5 +51,5 @@ class Admin extends User {
   }
 }
 
-const manager1 = new Manager('Manager1', 'manager1@gmail.com', true)
+const manager1 = new Manager('Manager1', 'manager1@gmail.com', true, 'sdf')
 console.log(manager1.getNumber())
