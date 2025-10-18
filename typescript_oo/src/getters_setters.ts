@@ -4,7 +4,7 @@ export class Address {
   private number?: number
 
   public setAddress(address: string): void {
-    if (address.lenght < 3){
+    if (address.length < 3){
       throw new Error('invalid address')
     }
     this.address = address
